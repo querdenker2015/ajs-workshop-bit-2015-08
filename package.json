@@ -1,0 +1,33 @@
+{
+  "name": "ajs-workshop-seed",
+  "version": "0.0.1",
+  "description": "A simple seed project for AngularJS.DE workshops.",
+  "main": "app/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": "",
+  "keywords": [
+    "angularjs",
+    "angularjs-de",
+    "seed",
+    "workshop"
+  ],
+  "author": [
+    "Philipp Tarasiewicz <philipp.tarasiewicz@angularjs.de>",
+    "Robin Böhm <robin.boehm@angularjs.de>",
+    "Sascha Brink <sascha.brink@angularjs.de>"
+  ],
+  "homepage": "http://angularjs.de/",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "0.12.37",
+    "karma-chrome-launcher": "0.2.0",
+    "karma-phantomjs-launcher": "0.2.0",
+    "karma-jasmine": "0.3.6",
+    "karma-ng-html2js-preprocessor": "0.1.0"
+  }
+}
