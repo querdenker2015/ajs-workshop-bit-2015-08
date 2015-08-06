@@ -1,0 +1,5 @@
+<h1>{{ book.title }}</h1>
+<p>
+  {{ book.abstract | truncate:maxchars:'...' }}
+</p>
+<pre><code>{{ book | json }}</code></pre>

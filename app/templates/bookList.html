@@ -14,7 +14,7 @@
             {{ book.author}}
         </td>
         <td>
-            {{ book.title }}
+            <a href="" ng-click="list.selectedBook = book">{{ book.title }}</a>
         </td>
         <td>
             {{ book.isbn }}
@@ -25,3 +25,4 @@
     </tr>
     </tbody>
 </table>
+<bit-book-preview ng-if="list.selectedBook" book="list.selectedBook" maxchars="15" on-rate-book=""></bit-book-preview>
