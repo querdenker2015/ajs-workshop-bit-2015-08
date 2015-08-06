@@ -1,0 +1,9 @@
+<h1>ColorPicker 2</h1>
+<ul>
+    <li><input type="range" ng-model="r" min="0" max="255"/></li>
+    <li><input type="range" ng-model="g" min="0" max="255"/></li>
+    <li><input type="range" ng-model="b" min="0" max="255"/></li>
+</ul>
+<p style="background-color: rgb({{ r }}, {{ g }}, {{ b }});">
+    {{ r }} {{ g }} {{ b }}
+</p>
