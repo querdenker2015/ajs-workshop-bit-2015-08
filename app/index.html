@@ -8,45 +8,40 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<div class="container" ng-cloak="">
+<div class="container">
+     <nav>
+         <ul>
+             <li>
+                 <a href="#/books">
+                     Books
+                 </a>
+             </li>
+             <li>
+                 <a href="#/books/123">
+                     A book
+                 </a>
+             </li>
+         </ul>
+     </nav>
 
-    <div ng-controller="ColorPickerCtrl as ctrl">
-        <ul>
-            <li><input type="range" ng-model="ctrl.r" min="0" max="255"/></li>
-            <li><input type="range" ng-model="ctrl.g" min="0" max="255"/></li>
-            <li><input type="range" ng-model="ctrl.b" min="0" max="255"/></li>
-        </ul>
-        <p style="background-color: rgb({{ ctrl.r }}, {{ ctrl.g }}, {{ ctrl.b }});">
-            {{ ctrl.r }} {{ ctrl.g }} {{ ctrl.b }}
-        </p>
-    </div>
+    <section ng-view>
 
-    <div ng-controller="ColorPickerCtrl as ctrl">
-        <ul>
-            <li><input type="range" ng-model="r" min="0" max="255"/></li>
-            <li><input type="range" ng-model="g" min="0" max="255"/></li>
-            <li><input type="range" ng-model="b" min="0" max="255"/></li>
-        </ul>
-        <p style="background-color: rgb({{ r }}, {{ g }}, {{ b }});">
-            {{ r }} {{ g }} {{ b }}
-        </p>
-    </div>
-
-    <bit-color-picker r="255" g="127" b="0">
-
-    </bit-color-picker>
-
-    <bit-color-picker r="0" g="255" b="0">
-
-    </bit-color-picker>
+    </section>
 
 </div>
 <!-- 3rd-Party Libs -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/momentjs/min/moment-with-locales.min.js"></script>
 <!-- Application Files -->
 <script src="scripts/app.js"></script>
 <script src="scripts/components/colorPicker/colorPicker.module.js"></script>
+<script src="scripts/controllers/BookListController.js"></script>
+<script src="scripts/controllers/BookEditController.js"></script>
+<script src="scripts/services/BookDataService.js"></script>
+
+
+<script src="scripts/_configs/RouteConfig.js"></script>
 </body>
 </html>
