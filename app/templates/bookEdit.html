@@ -22,4 +22,9 @@
         Save
     </button>
 </form>
-<bit-book-preview book="edit.book" on-rate-book=""></bit-book-preview>
+<bit-book-preview book="edit.book" maxchars="200" on-rate-book="edit.showRating(rating)" bit-foo ng-mouseover="">
+    <h1>Cool Book</h1>
+</bit-book-preview>
+<div bit-book-preview book="edit.book" ng-if="false">
+
+</div>

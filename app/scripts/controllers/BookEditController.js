@@ -14,6 +14,7 @@
 
         // Public API
         this.updateBook = updateBook;
+        this.showRating = showRating;
 
         /**
          *
@@ -24,6 +25,14 @@
                 .then(function(result) {
                     $log.debug(result);
                 });
+        }
+
+        /**
+         *
+         * @param rating
+         */
+        function showRating(rating) {
+            $log.debug(rating);
         }
 
     }

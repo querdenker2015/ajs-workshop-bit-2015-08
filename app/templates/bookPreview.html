@@ -1,5 +1,15 @@
-<h1>{{ book.title }}</h1>
-<p>
-  {{ book.abstract | truncate:maxchars:'...' }}
-</p>
-<pre><code>{{ book | json }}</code></pre>
+<div>
+  <div ng-transclude></div>
+  <h1>{{ preview.book.title }}</h1>
+  <p>
+    {{ preview.book.abstract | truncate:preview.maxchars:'...' }}
+  </p>
+  <div>
+    <input type="range" min="1" max="5" ng-model="preview.rating" />
+    <button class="btn btn-primary" ng-disabled="!preview.rating" ng-click="preview.rateBook(preview.rating)">
+      Rate
+    </button>
+    <bit-rating rating="preview.rating" editable="true" variant="stars"></bit-rating>
+  </div>
+  <pre><code>{{ preview.book | json }}</code></pre>
+</div>
